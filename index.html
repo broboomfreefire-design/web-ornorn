@@ -17,95 +17,24 @@
 
     <!-- File style.css -->
     <link rel="stylesheet" href="style.css" />
-    <style>
-      html {
-        scroll-behavior: smooth;
-      }
-      .sidebar-menu li a.active {
-        background-color: #0284c7 !important;
-        color: #ffffff !important;
-        padding-left: 8px;
-        border-radius: 4px;
-      }
-      .category-block {
-        scroll-margin-top: 120px;
-      }
-      .card-actions {
-        display: flex;
-        gap: 5px;
-        margin-top: 6px;
-      }
-      .card-actions .btn-action {
-        flex: 1;
-        padding: 5px 0;
-        border-radius: 6px;
-        border: 1px solid #e2e8f0;
-        background: #ffffff;
-        color: #475569;
-        font-size: 14px;
-        cursor: pointer;
-        transition: 0.2s;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .card-actions .btn-action:hover {
-        background: #f1f5f9;
-        color: #e11d48;
-      }
-      .card-actions .btn-buy-primary {
-        flex: 2;
-        background: #0284c7;
-        color: white;
-        border: none;
-      }
-      .card-actions .btn-buy-primary:hover {
-        background: #0369a1;
-        color: white;
-      }
-      .nav-icon-badge {
-        position: relative;
-        cursor: pointer;
-        font-size: 17px;
-        color: white;
-        transition: 0.2s;
-      }
-      .nav-icon-badge:hover {
-        color: #ffc107;
-      }
-    </style>
   </head>
   <body>
     <div class="main-container">
       <!-- 1. Header Zone -->
       <div class="top-header">
-        <div
-          class="logo-section"
-          style="cursor: pointer"
-          onclick="scrollToTop()"
-        >
+        <div class="logo-section" style="cursor: pointer" onclick="scrollToTop()">
           <img
             class="brand-logo-img"
-            src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120' width='52' height='52'><defs><linearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%23ff0055'/><stop offset='100%25' stop-color='%23be123c'/></linearGradient><linearGradient id='swoosh' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%2338bdf8'/><stop offset='100%25' stop-color='%230284c7'/></linearGradient></defs><circle cx='60' cy='60' r='56' fill='url(%23bg)' stroke='%23ffffff' stroke-width='3'/><circle cx='60' cy='60' r='50' fill='none' stroke='%23ffffff' stroke-width='1.5' stroke-dasharray='5,3' opacity='0.6'/><path d='M28 54 Q60 32 96 44 Q56 50 40 68 Q30 64 28 54 Z' fill='%23ffffff'/><path d='M35 46 Q62 28 88 36 Q58 40 44 56 Z' fill='url(%23swoosh)'/><text x='60' cy='60' y='76' font-family='Arial Black, Impact, sans-serif' font-size='28' font-weight='900' fill='%23ffffff' text-anchor='middle' letter-spacing='1'>SB</text><text x='60' y='92' font-family='Arial, sans-serif' font-size='10' font-weight='800' fill='%23fef08a' text-anchor='middle' letter-spacing='2.5'>SPORTS</text></svg>"
+            src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120' width='52' height='52'><defs><linearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%23ff0055'/><stop offset='100%25' stop-color='%23be123c'/></linearGradient><linearGradient id='swoosh' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%2338bdf8'/><stop offset='100%25' stop-color='%230284c7'/></linearGradient></defs><circle cx='60' cy='60' r='56' fill='url(%23bg)' stroke='%23ffffff' stroke-width='3'/><circle cx='60' cy='60' r='50' fill='none' stroke='%23ffffff' stroke-width='1.5' stroke-dasharray='5,3' opacity='0.6'/><path d='M28 54 Q60 32 96 44 Q56 50 40 68 Q30 64 28 54 Z' fill='%23ffffff'/><path d='M35 46 Q62 28 88 36 Q58 40 44 56 Z' fill='url(%23swoosh)'/><text x='60' y='76' font-family='Arial Black, Impact, sans-serif' font-size='28' font-weight='900' fill='%23ffffff' text-anchor='middle' letter-spacing='1'>SB</text><text x='60' y='92' font-family='Arial, sans-serif' font-size='10' font-weight='800' fill='%23fef08a' text-anchor='middle' letter-spacing='2.5'>SPORTS</text></svg>"
             alt="SB-Sports Logo"
           />
-          <span class="store-title" id="storeTitle"
-            >ហាងលក់ស្បែកជើងរត់ និងសម្លៀកបំពាក់កីឡា</span
-          >
+          <span class="store-title" id="storeTitle">ហាងលក់ស្បែកជើងរត់ និងសម្លៀកបំពាក់កីឡា</span>
         </div>
         <div class="auth-buttons">
-          <button
-            class="btn btn-outline-light btn-sm rounded-circle p-2"
-            id="loginBtn"
-            title="ចូលគណនី"
-          >
+          <button class="btn btn-outline-light btn-sm rounded-circle p-2" id="loginBtn" title="ចូលគណនី">
             <i class="bi bi-person-circle fs-6"></i>
           </button>
-          <button
-            class="btn btn-danger btn-sm rounded-circle p-2"
-            id="registerBtn"
-            title="បង្កើតគណនី"
-          >
+          <button class="btn btn-danger btn-sm rounded-circle p-2" id="registerBtn" title="បង្កើតគណនី">
             <i class="bi bi-person-plus-fill fs-6"></i>
           </button>
         </div>
@@ -114,19 +43,14 @@
       <!-- Announcement Bar -->
       <div class="announcement-bar">
         <div class="marquee-content" id="announcementText">
-          ☀️ ហាងយើងខ្ញុំធានាផ្តល់ជូនស្បែកជើងរត់
-          និងសម្លៀកបំពាក់កីឡាដែលមានគុណភាពខ្ពស់ នាំចូលផ្ទាល់ 100%!
-          &nbsp;&nbsp;&nbsp;&nbsp; 🔥 ចុះតម្លៃពិសេស 20%
-          សម្រាប់ការបញ្ជាទិញថ្ងៃនេះ!
+          ☀️ ហាងយើងខ្ញុំធានាផ្តល់ជូនស្បែកជើងរត់ និងសម្លៀកបំពាក់កីឡាដែលមានគុណភាពខ្ពស់ នាំចូលផ្ទាល់ 100%! &nbsp;&nbsp;&nbsp;&nbsp; 🔥 ចុះតម្លៃពិសេស 20% សម្រាប់ការបញ្ជាទិញថ្ងៃនេះ!
         </div>
       </div>
 
       <!-- 2. Navigation Bar Zone -->
       <div class="main-navbar">
         <ul class="nav-links">
-          <li>
-            <a href="#" class="active"><i class="bi bi-house-door-fill"></i></a>
-          </li>
+          <li><a href="#" class="active"><i class="bi bi-house-door-fill"></i></a></li>
           <li><a href="#shoes-section" id="navShoes">ស្បែកជើងរត់</a></li>
           <li><a href="#tees-section" id="navTees">អាវយឺតកីឡា</a></li>
           <li><a href="#caps-section" id="navCaps">មួកកីឡា</a></li>
@@ -135,26 +59,16 @@
           <li><a href="#women-caps-section" id="navWomenCaps">មួកនារី</a></li>
           <li><a href="#socks-section" id="navSocks">ស្រោមជើងកីឡា</a></li>
           <li>
-            <a
-              href="javascript:void(0)"
-              onclick="openContactModal()"
-              id="navContact"
-            >
+            <a href="javascript:void(0)" onclick="openContactModal()" id="navContact">
               <i class="bi bi-person-lines-fill"></i> ទំនាក់ទំនង
             </a>
           </li>
         </ul>
 
-        <div class="nav-right-tools d-flex align-items-center gap-3">
-          <span class="nav-icon-badge" title="Wishlist"
-            ><i class="bi bi-heart-fill"></i
-          ></span>
-          <span class="nav-icon-badge" title="Cart"
-            ><i class="bi bi-cart-fill"></i
-          ></span>
-          <span class="nav-icon-badge" title="Profile"
-            ><i class="bi bi-person-circle"></i
-          ></span>
+        <div class="nav-right-tools">
+          <span class="nav-icon-badge" title="Wishlist"><i class="bi bi-heart-fill"></i></span>
+          <span class="nav-icon-badge" title="Cart"><i class="bi bi-cart-fill"></i></span>
+          <span class="nav-icon-badge" title="Profile"><i class="bi bi-person-circle"></i></span>
 
           <div class="d-flex align-items-center gap-1">
             <i class="bi bi-globe"></i>
@@ -173,1646 +87,733 @@
         <div class="left-sidebar">
           <h5 id="sidebarHeading">ផលិតផល</h5>
           <ul class="sidebar-menu">
-            <li>
-              <a
-                href="#shoes-section"
-                class="sidebar-link active"
-                title="ស្បែកជើងរត់"
-                ><i class="category-icon">👟</i>
-                <span id="sideShoes">ស្បែកជើងរត់</span></a
-              >
-            </li>
-            <li>
-              <a href="#tees-section" class="sidebar-link" title="អាវយឺតកីឡា"
-                ><i class="category-icon">👕</i>
-                <span id="sideTees">អាវយឺតកីឡា</span></a
-              >
-            </li>
-            <li>
-              <a href="#caps-section" class="sidebar-link" title="មួកកីឡា"
-                ><i class="category-icon">🧢</i>
-                <span id="sideCaps">មួកកីឡា</span></a
-              >
-            </li>
-            <li>
-              <a href="#pants-section" class="sidebar-link" title="ខោកីឡា"
-                ><i class="category-icon">🩳</i>
-                <span id="sidePants">ខោកីឡា</span></a
-              >
-            </li>
-            <li>
-              <a href="#women-pants-section" class="sidebar-link" title="ខោនារី"
-                ><i class="category-icon">🧘‍♀️</i>
-                <span id="sideWomenPants">ខោនារី</span></a
-              >
-            </li>
-            <li>
-              <a href="#women-caps-section" class="sidebar-link" title="មួកនារី"
-                ><i class="category-icon">👒</i>
-                <span id="sideWomenCaps">មួកនារី</span></a
-              >
-            </li>
-            <li>
-              <a href="#socks-section" class="sidebar-link" title="ស្រោមជើងកីឡា"
-                ><i class="category-icon">🧦</i>
-                <span id="sideSocks">ស្រោមជើងកីឡា</span></a
-              >
-            </li>
+            <li><a href="#shoes-section" class="sidebar-link" title="ស្បែកជើងរត់"><i class="category-icon">👟</i> <span id="sideShoes">ស្បែកជើងរត់</span></a></li>
+            <li><a href="#tees-section" class="sidebar-link" title="អាវយឺតកីឡា"><i class="category-icon">👕</i> <span id="sideTees">អាវយឺតកីឡា</span></a></li>
+            <li><a href="#caps-section" class="sidebar-link" title="មួកកីឡា"><i class="category-icon">🧢</i> <span id="sideCaps">មួកកីឡា</span></a></li>
+            <li><a href="#pants-section" class="sidebar-link" title="ខោកីឡា"><i class="category-icon">🩳</i> <span id="sidePants">ខោកីឡា</span></a></li>
+            <li><a href="#women-pants-section" class="sidebar-link" title="ខោនារី"><i class="category-icon">🧘‍♀️</i> <span id="sideWomenPants">ខោនារី</span></a></li>
+            <li><a href="#women-caps-section" class="sidebar-link" title="មួកនារី"><i class="category-icon">👒</i> <span id="sideWomenCaps">មួកនារី</span></a></li>
+            <li><a href="#socks-section" class="sidebar-link" title="ស្រោមជើងកីឡា"><i class="category-icon">🧦</i> <span id="sideSocks">ស្រោមជើងកីឡា</span></a></li>
           </ul>
         </div>
 
-        <!-- Middle Content (All 7 Sections) -->
+        <!-- Middle Content -->
         <div class="middle-content">
-          <!-- 1. ផ្នែកស្បែកជើង -->
+          <!-- 1. ស្បែកជើង -->
           <div id="shoes-section" class="category-block mb-5">
-            <h5
-              class="text-center mb-4 fw-bold text-primary border-bottom pb-2"
-              id="titleShoes"
-            >
-              👟 ផលិតផលស្បែកជើងរត់ (Running Shoes)
-            </h5>
+            <h5 class="text-center mb-4 fw-bold text-primary border-bottom pb-2" id="titleShoes">👟 ផលិតផលស្បែកជើងរត់ (Running Shoes)</h5>
             <div class="row g-3">
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="Runing shoes/1.jpg" alt="Shoes" />
-                  <div class="product-title" data-key="shoe1">
-                    ស្បែកជើងរត់ Nike Air Max ស
-                  </div>
+                  <div class="product-title" data-key="shoe1">ស្បែកជើងរត់ Nike Air Max ស</div>
                   <div class="product-price">$120.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="Runing shoes/2.jpg" alt="Shoes" />
-                  <div class="product-title" data-key="shoe2">
-                    ស្បែកជើងកីឡាបាល់បោះ Nike ខ្មៅ
-                  </div>
+                  <div class="product-title" data-key="shoe2">ស្បែកជើងកីឡាបាល់បោះ Nike ខ្មៅ</div>
                   <div class="product-price">$95.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="Runing shoes/3.jpg" alt="Shoes" />
-                  <div class="product-title" data-key="shoe3">
-                    ស្បែកជើងរត់ Nike Precision ក្រហម
-                  </div>
+                  <div class="product-title" data-key="shoe3">ស្បែកជើងរត់ Nike Precision ក្រហម</div>
                   <div class="product-price">$95.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="Runing shoes/4.jpg" alt="Shoes" />
-                  <div class="product-title" data-key="shoe4">
-                    ស្បែកជើងរត់ Flyknit Swoosh ក្រហម
-                  </div>
+                  <div class="product-title" data-key="shoe4">ស្បែកជើងរត់ Flyknit Swoosh ក្រហម</div>
                   <div class="product-price">$95.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="Runing shoes/5.jpg" alt="Shoes" />
-                  <div class="product-title" data-key="shoe5">
-                    ស្បែកជើងរត់ Air Max សកែងទឹកក្រូច
-                  </div>
+                  <div class="product-title" data-key="shoe5">ស្បែកជើងរត់ Air Max សកែងទឹកក្រូច</div>
                   <div class="product-price">$95.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="Runing shoes/6.jpg" alt="Shoes" />
-                  <div class="product-title" data-key="shoe6">
-                    ស្បែកជើងរត់ Air Max សកែងបៃតង
-                  </div>
+                  <div class="product-title" data-key="shoe6">ស្បែកជើងរត់ Air Max សកែងបៃតង</div>
                   <div class="product-price">$95.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="Runing shoes/7.jpg" alt="Shoes" />
-                  <div class="product-title" data-key="shoe7">
-                    ស្បែកជើងរត់ Air Max សកែងផ្កាឈូក
-                  </div>
+                  <div class="product-title" data-key="shoe7">ស្បែកជើងរត់ Air Max សកែងផ្កាឈូក</div>
                   <div class="product-price">$95.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="Runing shoes/8.jpg" alt="Shoes" />
-                  <div class="product-title" data-key="shoe8">
-                    ស្បែកជើងរត់ Air Max 270 ពងមាន់
-                  </div>
+                  <div class="product-title" data-key="shoe8">ស្បែកជើងរត់ Air Max 270 ពងមាន់</div>
                   <div class="product-price">$95.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- 2. ផ្នែកអាវយឺត -->
+          <!-- 2. អាវយឺត -->
           <div id="tees-section" class="category-block mb-5">
-            <h5
-              class="text-center mb-4 fw-bold text-primary border-bottom pb-2"
-              id="titleTees"
-            >
-              👕 ផលិតផលអាវយឺតកីឡា (Sport T-Shirts)
-            </h5>
+            <h5 class="text-center mb-4 fw-bold text-primary border-bottom pb-2" id="titleTees">👕 ផលិតផលអាវយឺតកីឡា (Sport T-Shirts)</h5>
             <div class="row g-3">
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="Shirt Sport/1.jpg" alt="Tee" />
-                  <div class="product-title" data-key="tee1">
-                    អាវយឺតកីឡាដៃខ្លី Strike ស
-                  </div>
+                  <div class="product-title" data-key="tee1">អាវយឺតកីឡាដៃខ្លី Strike ស</div>
                   <div class="product-price">$28.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="Shirt Sport/2.jpg" alt="Tee" />
-                  <div class="product-title" data-key="tee2">
-                    អាវយឺតកីឡាបាល់ទាត់ ស/ខ្មៅ
-                  </div>
+                  <div class="product-title" data-key="tee2">អាវយឺតកីឡាបាល់ទាត់ ស/ខ្មៅ</div>
                   <div class="product-price">$28.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="Shirt Sport/3.jpg" alt="Tee" />
-                  <div class="product-title" data-key="tee3">
-                    អាវរឹបរាង Pro Tight ស
-                  </div>
+                  <div class="product-title" data-key="tee3">អាវរឹបរាង Pro Tight ស</div>
                   <div class="product-price">$28.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="Shirt Sport/4.jpg" alt="Tee" />
-                  <div class="product-title" data-key="tee4">
-                    អាវកីឡា Gradient លឿងខ្មៅ
-                  </div>
+                  <div class="product-title" data-key="tee4">អាវកីឡា Gradient លឿងខ្មៅ</div>
                   <div class="product-price">$28.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="Shirt Sport/5.jpg" alt="Tee" />
-                  <div class="product-title" data-key="tee5">
-                    អាវរត់ដៃវែង Dri-FIT ខ្មៅ
-                  </div>
+                  <div class="product-title" data-key="tee5">អាវរត់ដៃវែង Dri-FIT ខ្មៅ</div>
                   <div class="product-price">$28.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="Shirt Sport/6.jpg" alt="Tee" />
-                  <div class="product-title" data-key="tee6">
-                    អាវកីឡាដៃវែង Knit ពណ៌ខៀវ
-                  </div>
+                  <div class="product-title" data-key="tee6">អាវកីឡាដៃវែង Knit ពណ៌ខៀវ</div>
                   <div class="product-price">$28.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="Shirt Sport/7.jpg" alt="Tee" />
-                  <div class="product-title" data-key="tee7">
-                    អាវស្វេតទ័រដៃវែង Nike ប្រផេះ
-                  </div>
+                  <div class="product-title" data-key="tee7">អាវស្វេតទ័រដៃវែង Nike ប្រផេះ</div>
                   <div class="product-price">$28.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="Shirt Sport/8.jpg" alt="Tee" />
-                  <div class="product-title" data-key="tee8">
-                    អាវស្វេតទ័រ Jordan Jumpman
-                  </div>
+                  <div class="product-title" data-key="tee8">អាវស្វេតទ័រ Jordan Jumpman</div>
                   <div class="product-price">$28.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- 3. ផ្នែកមួក -->
+          <!-- 3. មួក -->
           <div id="caps-section" class="category-block mb-5">
-            <h5
-              class="text-center mb-4 fw-bold text-primary border-bottom pb-2"
-              id="titleCaps"
-            >
-              🧢 ផលិតផលមួកកីឡា (Running Caps)
-            </h5>
+            <h5 class="text-center mb-4 fw-bold text-primary border-bottom pb-2" id="titleCaps">🧢 ផលិតផលមួកកីឡា (Running Caps)</h5>
             <div class="row g-3">
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="Cap Sport/1.jpg" alt="Cap" />
-                  <div class="product-title" data-key="cap1">
-                    មួកកីឡារត់ Mesh ឆ្នូតស
-                  </div>
+                  <div class="product-title" data-key="cap1">មួកកីឡារត់ Mesh ឆ្នូតស</div>
                   <div class="product-price">$18.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="Cap Sport/2.jpg" alt="Cap" />
-                  <div class="product-title" data-key="cap2">
-                    មួកកីឡា Adidas Aeroready ខ្មៅ
-                  </div>
+                  <div class="product-title" data-key="cap2">មួកកីឡា Adidas Aeroready ខ្មៅ</div>
                   <div class="product-price">$18.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="Cap Sport/3.jpg" alt="Cap" />
-                  <div class="product-title" data-key="cap3">
-                    មួកកីឡារត់ម៉ារ៉ាតុង Aonijie
-                  </div>
+                  <div class="product-title" data-key="cap3">មួកកីឡារត់ម៉ារ៉ាតុង Aonijie</div>
                   <div class="product-price">$18.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="Cap Sport/4.jpg" alt="Cap" />
-                  <div class="product-title" data-key="cap4">
-                    មួកកីឡារត់ Ultralight ប្រផេះ
-                  </div>
+                  <div class="product-title" data-key="cap4">មួកកីឡារត់ Ultralight ប្រផេះ</div>
                   <div class="product-price">$18.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="Cap Sport/5.jpg" alt="Cap" />
-                  <div class="product-title" data-key="cap5">
-                    មួកវាល Safari បៃតងចាស់
-                  </div>
+                  <div class="product-title" data-key="cap5">មួកវាល Safari បៃតងចាស់</div>
                   <div class="product-price">$18.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="Cap Sport/6.jpg" alt="Cap" />
-                  <div class="product-title" data-key="cap6">
-                    មួក Boonie Hat Quiksilver
-                  </div>
+                  <div class="product-title" data-key="cap6">មួក Boonie Hat Quiksilver</div>
                   <div class="product-price">$18.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="Cap Sport/7.jpg" alt="Cap" />
-                  <div class="product-title" data-key="cap7">
-                    មួកវាលការពារកម្តៅថ្ងៃ ក្រហម
-                  </div>
+                  <div class="product-title" data-key="cap7">មួកវាលការពារកម្តៅថ្ងៃ ក្រហម</div>
                   <div class="product-price">$18.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="Cap Sport/8.jpg" alt="Cap" />
-                  <div class="product-title" data-key="cap8">
-                    មួក Safari Hat ពណ៌កាគី
-                  </div>
+                  <div class="product-title" data-key="cap8">មួក Safari Hat ពណ៌កាគី</div>
                   <div class="product-price">$18.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- 4. ផ្នែកខោកីឡា -->
+          <!-- 4. ខោកីឡា -->
           <div id="pants-section" class="category-block mb-5">
-            <h5
-              class="text-center mb-4 fw-bold text-primary border-bottom pb-2"
-              id="titlePants"
-            >
-              🩳 ផលិតផលខោកីឡា (Running Pants & Shorts)
-            </h5>
+            <h5 class="text-center mb-4 fw-bold text-primary border-bottom pb-2" id="titlePants">🩳 ផលិតផលខោកីឡា (Running Pants & Shorts)</h5>
             <div class="row g-3">
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="Short Running/1.jpg" alt="Pants" />
-                  <div class="product-title" data-key="pant1">
-                    ខោរត់ ២ជាន់ Pro Mesh ប្រផេះ
-                  </div>
+                  <div class="product-title" data-key="pant1">ខោរត់ ២ជាន់ Pro Mesh ប្រផេះ</div>
                   <div class="product-price">$22.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="Short Running/2.jpg" alt="Pants" />
-                  <div class="product-title" data-key="pant2">
-                    ខោកីឡា ២ជាន់ ប្រផេះចាស់
-                  </div>
+                  <div class="product-title" data-key="pant2">ខោកីឡា ២ជាន់ ប្រផេះចាស់</div>
                   <div class="product-price">$25.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="Short Running/3.jpg" alt="Pants" />
-                  <div class="product-title" data-key="pant3">
-                    ខោកីឡា ២ជាន់ ខៀវទឹកប៊ិច
-                  </div>
+                  <div class="product-title" data-key="pant3">ខោកីឡា ២ជាន់ ខៀវទឹកប៊ិច</div>
                   <div class="product-price">$25.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="Short Running/4.jpg" alt="Pants" />
-                  <div class="product-title" data-key="pant4">
-                    ខោកីឡា ២ជាន់ ពណ៌ស
-                  </div>
+                  <div class="product-title" data-key="pant4">ខោកីឡា ២ជាន់ ពណ៌ស</div>
                   <div class="product-price">$25.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="Short Running/5.jpg" alt="Pants" />
-                  <div class="product-title" data-key="pant5">
-                    ខោកីឡាបាល់បោះ/រត់ ក្រហម
-                  </div>
+                  <div class="product-title" data-key="pant5">ខោកីឡាបាល់បោះ/រត់ ក្រហម</div>
                   <div class="product-price">$25.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="Short Running/6.jpg" alt="Pants" />
-                  <div class="product-title" data-key="pant6">
-                    ខោកីឡា Pro Training ខៀវទឹកក្រូច
-                  </div>
+                  <div class="product-title" data-key="pant6">ខោកីឡា Pro Training ខៀវទឹកក្រូច</div>
                   <div class="product-price">$25.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="Short Running/7.jpg" alt="Pants" />
-                  <div class="product-title" data-key="pant7">
-                    ខោកីឡារត់ Dry-Fit ពណ៌ខៀវ
-                  </div>
+                  <div class="product-title" data-key="pant7">ខោកីឡារត់ Dry-Fit ពណ៌ខៀវ</div>
                   <div class="product-price">$25.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="Short Running/8.jpg" alt="Pants" />
-                  <div class="product-title" data-key="pant8">
-                    ខោកីឡារត់ Dry-Fit ពណ៌លឿង
-                  </div>
+                  <div class="product-title" data-key="pant8">ខោកីឡារត់ Dry-Fit ពណ៌លឿង</div>
                   <div class="product-price">$25.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- ៥. ផ្នែកខោនារី -->
+          <!-- ៥. ខោនារី -->
           <div id="women-pants-section" class="category-block mb-5">
-            <h5
-              class="text-center mb-4 fw-bold text-primary border-bottom pb-2"
-              id="titleWomenPants"
-            >
-              🩳 ផលិតផលខោនារី (Women's Running Pants & Shorts)
-            </h5>
+            <h5 class="text-center mb-4 fw-bold text-primary border-bottom pb-2" id="titleWomenPants">🩳 ផលិតផលខោនារី (Women's Running Pants & Shorts)</h5>
             <div class="row g-3">
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="paths girl/1.jpg" alt="Women Shorts" />
-                  <div class="product-title" data-key="wpant1">
-                    ខោរត់នារី ២ជាន់ UA ស្វាយខ្ចី
-                  </div>
+                  <div class="product-title" data-key="wpant1">ខោរត់នារី ២ជាន់ UA ស្វាយខ្ចី</div>
                   <div class="product-price">$20.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="paths girl/2.jpg" alt="Women Leggings" />
-                  <div class="product-title" data-key="wpant2">
-                    ខោរត់នារីចង្កេះខ្ពស់ ពណ៌ខ្មៅ
-                  </div>
+                  <div class="product-title" data-key="wpant2">ខោរត់នារីចង្កេះខ្ពស់ ពណ៌ខ្មៅ</div>
                   <div class="product-price">$25.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="paths girl/3.jpg" alt="Women Leggings" />
-                  <div class="product-title" data-key="wpant3">
-                    ខោរត់នារី ២ជាន់ ពណ៌ខ្មៅ
-                  </div>
+                  <div class="product-title" data-key="wpant3">ខោរត់នារី ២ជាន់ ពណ៌ខ្មៅ</div>
                   <div class="product-price">$25.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="paths girl/4.jpg" alt="Women Leggings" />
-                  <div class="product-title" data-key="wpant4">
-                    ខោកីឡានារី ២ជាន់ ស្វាយស្រាល
-                  </div>
+                  <div class="product-title" data-key="wpant4">ខោកីឡានារី ២ជាន់ ស្វាយស្រាល</div>
                   <div class="product-price">$25.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="paths girl/5.jpg" alt="Women Leggings" />
-                  <div class="product-title" data-key="wpant5">
-                    ខោរត់នារីពណ៌ផ្កាឈូកស្រស់
-                  </div>
+                  <div class="product-title" data-key="wpant5">ខោរត់នារីពណ៌ផ្កាឈូកស្រស់</div>
                   <div class="product-price">$25.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="paths girl/6.jpg" alt="Women Leggings" />
-                  <div class="product-title" data-key="wpant6">
-                    ខោកីឡានារី ២ជាន់ ពណ៌ទឹកក្រូច
-                  </div>
+                  <div class="product-title" data-key="wpant6">ខោកីឡានារី ២ជាន់ ពណ៌ទឹកក្រូច</div>
                   <div class="product-price">$25.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="paths girl/7.jpg" alt="Women Leggings" />
-                  <div class="product-title" data-key="wpant7">
-                    ខោកីឡានារី ២ជាន់ បៃតងចាំង
-                  </div>
+                  <div class="product-title" data-key="wpant7">ខោកីឡានារី ២ជាន់ បៃតងចាំង</div>
                   <div class="product-price">$25.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="paths girl/8.jpg" alt="Women Leggings" />
-                  <div class="product-title" data-key="wpant8">
-                    ខោកីឡានារី ២ជាន់ ចង្កេះខ្ពស់ ខ្មៅ
-                  </div>
+                  <div class="product-title" data-key="wpant8">ខោកីឡានារី ២ជាន់ ចង្កេះខ្ពស់ ខ្មៅ</div>
                   <div class="product-price">$25.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- ៦. ផ្នែកមួកនារី -->
+          <!-- ៦. មួកនារី -->
           <div id="women-caps-section" class="category-block mb-5">
-            <h5
-              class="text-center mb-4 fw-bold text-primary border-bottom pb-2"
-              id="titleWomenCaps"
-            >
-              🧢 ផលិតផលមួកនារី (Women's Running Caps)
-            </h5>
+            <h5 class="text-center mb-4 fw-bold text-primary border-bottom pb-2" id="titleWomenCaps">🧢 ផលិតផលមួកនារី (Women's Running Caps)</h5>
             <div class="row g-3">
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="cap girl/1.jpg" alt="Women Cap" />
-                  <div class="product-title" data-key="wcap1">
-                    មួកកីឡារត់ស្រាលនារី ពណ៌ខ្មៅ
-                  </div>
+                  <div class="product-title" data-key="wcap1">មួកកីឡារត់ស្រាលនារី ពណ៌ខ្មៅ</div>
                   <div class="product-price">$16.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="cap girl/2.jpg" alt="Women Visor Cap" />
-                  <div class="product-title" data-key="wcap2">
-                    មួកកីឡានារី Trail Cap បៃតងចាស់
-                  </div>
+                  <div class="product-title" data-key="wcap2">មួកកីឡានារី Trail Cap បៃតងចាស់</div>
                   <div class="product-price">$15.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="cap girl/3.jpg" alt="Women Visor Cap" />
-                  <div class="product-title" data-key="wcap3">
-                    មួកកីឡារត់នារី ពណ៌ផ្កាឈូក
-                  </div>
+                  <div class="product-title" data-key="wcap3">មួកកីឡារត់នារី ពណ៌ផ្កាឈូក</div>
                   <div class="product-price">$15.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="cap girl/4.jpg" alt="Women Visor Cap" />
-                  <div class="product-title" data-key="wcap4">
-                    មួកកីឡារត់នារី Mesh ក្រហមឈាមជ្រូក
-                  </div>
+                  <div class="product-title" data-key="wcap4">មួកកីឡារត់នារី Mesh ក្រហមឈាមជ្រូក</div>
                   <div class="product-price">$15.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="cap girl/5.jpg" alt="Women Visor Cap" />
-                  <div class="product-title" data-key="wcap5">
-                    មួកបើកក្បាល Nike Visor ពណ៌ស
-                  </div>
+                  <div class="product-title" data-key="wcap5">មួកបើកក្បាល Nike Visor ពណ៌ស</div>
                   <div class="product-price">$15.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="cap girl/6.jpg" alt="Women Visor Cap" />
-                  <div class="product-title" data-key="wcap6">
-                    មួកបើកក្បាល Nike Visor ក្រហម
-                  </div>
+                  <div class="product-title" data-key="wcap6">មួកបើកក្បាល Nike Visor ក្រហម</div>
                   <div class="product-price">$15.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="cap girl/7.jpg" alt="Women Visor Cap" />
-                  <div class="product-title" data-key="wcap7">
-                    មួកបើកក្បាល Nike Visor បៃតងខ្ចី
-                  </div>
+                  <div class="product-title" data-key="wcap7">មួកបើកក្បាល Nike Visor បៃតងខ្ចី</div>
                   <div class="product-price">$15.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="cap girl/8.jpg" alt="Women Visor Cap" />
-                  <div class="product-title" data-key="wcap8">
-                    មួកបើកក្បាល Nike Golf Visor ស
-                  </div>
+                  <div class="product-title" data-key="wcap8">មួកបើកក្បាល Nike Golf Visor ស</div>
                   <div class="product-price">$15.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- ៧. ផ្នែកស្រោមជើងកីឡា -->
+          <!-- ៧. ស្រោមជើងកីឡា -->
           <div id="socks-section" class="category-block mb-5">
-            <h5
-              class="text-center mb-4 fw-bold text-primary border-bottom pb-2"
-              id="titleSocks"
-            >
-              🧦 ផលិតផលស្រោមជើងកីឡា (Running Socks)
-            </h5>
+            <h5 class="text-center mb-4 fw-bold text-primary border-bottom pb-2" id="titleSocks">🧦 ផលិតផលស្រោមជើងកីឡា (Running Socks)</h5>
             <div class="row g-3">
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="Sock Sport/1.jpg" alt="Socks" />
-                  <div class="product-title" data-key="sock1">
-                    ស្រោមជើងរត់ប្រណាំងពណ៌ខៀវ
-                  </div>
+                  <div class="product-title" data-key="sock1">ស្រោមជើងរត់ប្រណាំងពណ៌ខៀវ</div>
                   <div class="product-price">$8.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="Sock Sport/2.jpg" alt="Socks" />
-                  <div class="product-title" data-key="sock2">
-                    ស្រោមជើងរត់ប្រណាំងពណ៌ផ្កាឈូក
-                  </div>
+                  <div class="product-title" data-key="sock2">ស្រោមជើងរត់ប្រណាំងពណ៌ផ្កាឈូក</div>
                   <div class="product-price">$10.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="Sock Sport/3.jpg" alt="Socks" />
-                  <div class="product-title" data-key="sock3">
-                    ស្រោមជើងរត់ប្រណាំងពណ៌លឿង
-                  </div>
+                  <div class="product-title" data-key="sock3">ស្រោមជើងរត់ប្រណាំងពណ៌លឿង</div>
                   <div class="product-price">$10.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="Sock Sport/4.jpg" alt="Socks" />
-                  <div class="product-title" data-key="sock4">
-                    ស្រោមជើងរត់ទ្រទ្រង់បាតជើង ខៀវទឹកក្រូច
-                  </div>
+                  <div class="product-title" data-key="sock4">ស្រោមជើងរត់ទ្រទ្រង់បាតជើង ខៀវទឹកក្រូច</div>
                   <div class="product-price">$10.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="Sock Sport/5.jpg" alt="Socks" />
-                  <div class="product-title" data-key="sock5">
-                    ស្រោមជើងរត់ម៉ារ៉ាតុងកជើងខ្លី ខ្មៅ
-                  </div>
+                  <div class="product-title" data-key="sock5">ស្រោមជើងរត់កវែង ខៀវចាស់</div>
                   <div class="product-price">$10.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="Sock Sport/6.jpg" alt="Socks" />
-                  <div class="product-title" data-key="sock6">
-                    ស្រោមជើងរត់ម៉ារ៉ាតុងកជើងខ្លី ស
-                  </div>
+                  <div class="product-title" data-key="sock6">ស្រោមជើងរត់ម៉ារ៉ាតុង បៃតងចាំង</div>
                   <div class="product-price">$10.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
                   <img src="Sock Sport/7.jpg" alt="Socks" />
-                  <div class="product-title" data-key="sock7">
-                    ស្រោមជើងរត់កម្រិតស្រាល ប្រផេះ
-                  </div>
+                  <div class="product-title" data-key="sock7">ស្រោមជើងរត់កម្រិតស្រាល ពណ៌ស</div>
                   <div class="product-price">$10.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
               <div class="col-md-3 col-6">
                 <div class="product-card">
-                  <img src="Sock Sport/8.jpg" alt="Socks" />
-                  <div class="product-title" data-key="sock8">
-                    ស្រោមជើងកីឡាប៉ុងក្រាស់ ជំនួយបាតជើង
-                  </div>
+                  <img src="Sock Sport/5.jpg" alt="Socks" />
+                  <div class="product-title" data-key="sock8">ស្រោមជើងរត់កវែង ខៀវចាស់</div>
                   <div class="product-price">$10.00</div>
                   <div class="card-actions">
-                    <button class="btn-action" title="Add to Wishlist">
-                      <i class="bi bi-heart"></i>
-                    </button>
-                    <button
-                      class="btn-action"
-                      title="Quick View"
-                      onclick="
-                        openProductDetailFromCard(this.closest('.product-card'))
-                      "
-                    >
-                      <i class="bi bi-eye"></i>
-                    </button>
-                    <button class="btn-action btn-buy-primary buy-btn">
-                      <i class="bi bi-cart-plus"></i>
-                      <span class="buy-btn-text">ទិញ</span>
-                    </button>
+                    <button class="btn-action" title="Wishlist"><i class="bi bi-heart"></i></button>
+                    <button class="btn-action" title="Quick View" onclick="openProductDetailFromCard(this.closest('.product-card'))"><i class="bi bi-eye"></i></button>
+                    <button class="btn-action btn-buy-primary buy-btn"><i class="bi bi-cart-plus"></i> <span class="buy-btn-text">ទិញ</span></button>
                   </div>
                 </div>
               </div>
@@ -1825,9 +826,7 @@
           <h5 id="bestsellerHeading">ផលិតផលលក់ដាច់ប្រចាំហាង</h5>
           <div class="bestseller-item">
             <img src="Runing shoes/1.jpg" alt="Best Shoes" />
-            <div class="bestseller-title" id="bestShoe">
-              ស្បែកជើងរត់ Nike Air Max ស
-            </div>
+            <div class="bestseller-title" id="bestShoe">ស្បែកជើងរត់ Nike Air Max ស</div>
             <div class="text-danger fw-bold fs-7">$120.00</div>
           </div>
           <div class="bestseller-item">
@@ -1837,37 +836,27 @@
           </div>
           <div class="bestseller-item">
             <img src="Cap Sport/1.jpg" alt="Best Cap" />
-            <div class="bestseller-title" id="bestCap">
-              មួកកីឡារត់ Mesh ឆ្នូតស
-            </div>
+            <div class="bestseller-title" id="bestCap">មួកកីឡារត់ Mesh ឆ្នូតស</div>
             <div class="text-danger fw-bold fs-7">$18.00</div>
           </div>
           <div class="bestseller-item">
             <img src="Short Running/1.jpg" alt="Best Shorts" />
-            <div class="bestseller-title" id="bestPants">
-              ខោរត់ ២ជាន់ Pro Mesh ប្រផេះ
-            </div>
+            <div class="bestseller-title" id="bestPants">ខោរត់ ២ជាន់ Pro Mesh ប្រផេះ</div>
             <div class="text-danger fw-bold fs-7">$22.00</div>
           </div>
           <div class="bestseller-item">
             <img src="paths girl/1.jpg" alt="Best Women Shorts" />
-            <div class="bestseller-title" id="bestWomenPants">
-              ខោរត់នារី ២ជាន់ UA ស្វាយខ្ចី
-            </div>
+            <div class="bestseller-title" id="bestWomenPants">ខោរត់នារី ២ជាន់ UA ស្វាយខ្ចី</div>
             <div class="text-danger fw-bold fs-7">$20.00</div>
           </div>
           <div class="bestseller-item">
             <img src="cap girl/1.jpg" alt="Best Women Cap" />
-            <div class="bestseller-title" id="bestWomenCap">
-              មួកកីឡារត់ស្រាលនារី ខ្មៅ
-            </div>
+            <div class="bestseller-title" id="bestWomenCap">មួកកីឡារត់ស្រាលនារី ខ្មៅ</div>
             <div class="text-danger fw-bold fs-7">$16.00</div>
           </div>
           <div class="bestseller-item">
             <img src="Sock Sport/1.jpg" alt="Best Socks" />
-            <div class="bestseller-title" id="bestSocks">
-              ស្រោមជើងរត់ Pro Anti-Blister ខៀវ
-            </div>
+            <div class="bestseller-title" id="bestSocks">ស្រោមជើងរត់ Pro Anti-Blister ខៀវ</div>
             <div class="text-danger fw-bold fs-7">$8.00</div>
           </div>
         </div>
@@ -1879,296 +868,109 @@
       <i class="bi bi-arrow-up"></i> TOP
     </button>
 
-    <!-- ========================================== -->
-    <!-- 📞 POPUP MODAL: ទំនាក់ទំនង & ព័ត៌មានគម្រោង -->
-    <!-- ========================================== -->
+    <!-- Modal ទំនាក់ទំនង -->
     <div class="sport-modal-backdrop" id="contactModal">
       <div class="sport-modal modal-contact-custom">
         <div class="modal-header-sport">
-          <h5>
-            <i class="bi bi-info-circle-fill"></i>
-            <span id="mContactHeader">ព័ត៌មានទំនាក់ទំនង & គម្រោង</span>
-          </h5>
-          <button
-            class="btn-close-modal text-white"
-            onclick="closeModal('contactModal')"
-          >
-            &times;
-          </button>
+          <h5><i class="bi bi-info-circle-fill"></i> <span id="mContactHeader">ព័ត៌មានទំនាក់ទំនង & គម្រោង</span></h5>
+          <button class="btn-close-modal text-white" onclick="closeModal('contactModal')">&times;</button>
         </div>
-
         <div class="p-4" style="max-height: 80vh; overflow-y: auto">
           <div class="text-center mb-3">
-            <h5 class="fw-bold text-primary mb-1" id="teamSecTitle">
-              ព័ត៌មានអំពីគម្រោង និងសមាជិក
-            </h5>
-            <p class="text-muted small mb-0" id="teamSecSub">
-              ព័ត៌មានលម្អិតអំពីការសិក្សា និងការបង្កើតគេហទំព័រនេះ
-            </p>
+            <h5 class="fw-bold text-primary mb-1">ព័ត៌មានអំពីគម្រោង និងសមាជិក</h5>
+            <p class="text-muted small mb-0">ព័ត៌មានលម្អិតអំពីការសិក្សា និងការបង្កើតគេហទំព័រនេះ</p>
           </div>
-
           <div class="row g-3 mb-4">
             <div class="col-md-6">
-              <div
-                class="profile-card d-flex align-items-center gap-3 p-3 h-100"
-              >
+              <div class="profile-card d-flex align-items-center gap-3 p-3 h-100">
                 <div class="profile-avatar-wrap">
-                  <img
-                    src="Contact/photo_2026-08-16_17-18-18.jpg"
-                    alt="Lecturer"
-                    onerror="
-                      this.src =
-                        'https://cdn-icons-png.flaticon.com/512/3135/3135715.png'
-                    "
-                  />
-                  <span class="role-tag bg-primary" id="tagLecturer"
-                    >គ្រូបង្រៀន</span
-                  >
+                  <img src="photo_2026-08-24_14-53-46.jpg" alt="Lecturer" onerror="this.src='Contact/photo_2026-08-16_17-18-18.jpg'" />
+                  <span class="role-tag bg-primary">គ្រូបង្រៀន</span>
                 </div>
                 <div class="profile-details">
-                  <h6 class="fw-bold text-dark mb-1" id="lecName">
-                    សាស្រ្តាចារ្យ: រី វិសាល
-                  </h6>
-                  <div class="info-row small">
-                    <strong id="lblSubject">មុខវិជ្ជា:</strong>
-                    <span id="valSubject">Web Development</span>
-                  </div>
-                  <div class="info-row small">
-                    <strong id="lblInstitute">វិទ្យាស្ថាន:</strong>
-                    <span id="valInstitute">SETEC INSTITUTE</span>
-                  </div>
-                  <div class="info-row small">
-                    <strong id="lblAcademic">ឆ្នាំសិក្សា:</strong>
-                    <span id="valAcademic">2025 - 2026</span>
-                  </div>
+                  <h6 class="fw-bold text-dark mb-1">សាស្រ្តាចារ្យ: រី វិសាល</h6>
+                  <div class="info-row small"><strong>មុខវិជ្ជា:</strong> Web Development</div>
+                  <div class="info-row small"><strong>វិទ្យាស្ថាន:</strong> SETEC INSTITUTE</div>
                 </div>
               </div>
             </div>
-
             <div class="col-md-6">
-              <div
-                class="profile-card d-flex align-items-center gap-3 p-3 h-100"
-              >
+              <div class="profile-card d-flex align-items-center gap-3 p-3 h-100">
                 <div class="profile-avatar-wrap">
-                  <img
-                    src="Contact/photo_2026-08-16_17-18-19.jpg"
-                    alt="Student"
-                    onerror="
-                      this.src =
-                        'https://cdn-icons-png.flaticon.com/512/3135/3135768.png'
-                    "
-                  />
-                  <span class="role-tag bg-danger" id="tagStudent"
-                    >និស្សិត</span
-                  >
+                  <img src="Contact/4x6.png" alt="Student" onerror="this.src='Contact/photo_2026-08-16_17-18-19.jpg'" />
+                  <span class="role-tag bg-danger">និស្សិត</span>
                 </div>
                 <div class="profile-details">
-                  <h6 class="fw-bold text-dark mb-1" id="stuName">
-                    និស្សិត: ជា សម្បត្តិ
-                  </h6>
-                  <div class="info-row small">
-                    <strong id="lblClass">ថ្នាក់ / បន្ទប់:</strong>
-                    <span id="valClass">SX4</span>
-                  </div>
-                  <div class="info-row small">
-                    <strong id="lblYear">កម្រិតសិក្សា:</strong>
-                    <span id="valYear">ឆ្នាំទី 1 (ឆមាសទី 2)</span>
-                  </div>
-                  <div class="info-row small">
-                    <strong id="lblMajor">ជំនាញ:</strong>
-                    <span id="valMajor">Web Development</span>
-                  </div>
+                  <h6 class="fw-bold text-dark mb-1">និស្សិត: ជា សម្បត្តិ</h6>
+                  <div class="info-row small"><strong>ថ្នាក់ / បន្ទប់:</strong> SX4</div>
+                  <div class="info-row small"><strong>ជំនាញ:</strong> Web Development</div>
                 </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="p-3 bg-light rounded border">
-            <h6
-              class="fw-bold text-dark border-bottom pb-2 mb-2"
-              id="storeContactTitle"
-            >
-              <i class="bi bi-shop"></i> ព័ត៌មានទំនាក់ទំនងហាង
-            </h6>
-            <div class="row g-2 small text-muted">
-              <div class="col-sm-6" id="storeAddress">
-                <strong
-                  ><i class="bi bi-geo-alt-fill text-danger"></i>
-                  អាសយដ្ឋាន:</strong
-                >
-                ភ្នំពេញ, កម្ពុជា
-              </div>
-              <div class="col-sm-6" id="storePhone">
-                <strong
-                  ><i class="bi bi-telephone-fill text-success"></i>
-                  ទូរស័ព្ទ:</strong
-                >
-                096 983 1891 / 098 765 432
-              </div>
-              <div class="col-sm-6" id="storeEmail">
-                <strong
-                  ><i class="bi bi-envelope-fill text-warning"></i>
-                  អ៊ីមែល:</strong
-                >
-                sambathjackyy@gmail.com
-              </div>
-              <div class="col-sm-6" id="storeHours">
-                <strong
-                  ><i class="bi bi-clock-fill text-primary"></i>
-                  ម៉ោងធ្វើការ:</strong
-                >
-                7:30 AM - 9:00 PM
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- ========================================== -->
-    <!-- 🎓 FOOTER: ABOUT US & PROJECT INFO (3 LANGUAGES) -->
-    <!-- ========================================== -->
+
+    <!-- Footer -->
     <footer class="footer-project-section mt-5">
       <div class="main-container">
         <div class="footer-team-card p-4">
           <div class="text-center mb-4">
-            <h4
-              class="fw-bold text-uppercase text-white mb-1"
-              id="teamSecTitle"
-            >
-              ព័ត៌មានអំពីគម្រោង និងសមាជិក
-            </h4>
-            <p class="text-light opacity-75 small mb-0" id="teamSecSub">
-              ព័ត៌មានលម្អិតអំពីការសិក្សា និងការបង្កើតគេហទំព័រនេះ
-            </p>
+            <h4 class="fw-bold text-uppercase text-white mb-1" id="teamSecTitle">ព័ត៌មានអំពីគម្រោង និងសមាជិក</h4>
+            <p class="text-light opacity-75 small mb-0" id="teamSecSub">ព័ត៌មានលម្អិតអំពីការសិក្សា និងការបង្កើតគេហទំព័រនេះ</p>
           </div>
-
           <div class="row g-4 align-items-center">
-            <!-- Profile គ្រូបង្រៀន (Lecturer) -->
             <div class="col-md-6">
-              <div
-                class="footer-profile-box d-flex align-items-center gap-3 p-3"
-              >
+              <div class="footer-profile-box d-flex align-items-center gap-3 p-3">
                 <div class="footer-avatar-wrap">
-                  <img
-                    src="photo_2026-08-24_14-53-46.jpg"
-                    alt="Lecturer"
-                    onerror="this.src = 'Contact/photo_2026-08-16_17-18-18.jpg'"
-                  />
-                  <span class="role-tag bg-primary" id="tagLecturer"
-                    >គ្រូបង្រៀន</span
-                  >
+                  <img src="photo_2026-08-24_14-53-46.jpg" alt="Lecturer" onerror="this.src='Contact/photo_2026-08-16_17-18-18.jpg'" />
+                  <span class="role-tag bg-primary" id="tagLecturer">គ្រូបង្រៀន</span>
                 </div>
                 <div class="footer-profile-details text-white">
-                  <h5 class="fw-bold mb-1 text-warning" id="lecName">
-                    សាស្រ្តាចារ្យ: រី វិសាន
-                  </h5>
-                  <div class="info-row">
-                    <strong id="lblSubject">មុខវិជ្ជា:</strong>
-                    <span id="valSubject">Web Development</span>
-                  </div>
-                  <div class="info-row">
-                    <strong id="lblInstitute">វិទ្យាស្ថាន:</strong>
-                    <span id="valInstitute">SETEC INSTITUTE</span>
-                  </div>
-                  <div class="info-row">
-                    <strong id="lblAcademic">ឆ្នាំសិក្សា:</strong>
-                    <span id="valAcademic">2025 - 2026</span>
-                  </div>
+                  <h5 class="fw-bold mb-1 text-warning" id="lecName">សាស្រ្តាចារ្យ: រី វិសាន</h5>
+                  <div class="info-row"><strong id="lblSubject">មុខវិជ្ជា:</strong> <span id="valSubject">Web Development</span></div>
+                  <div class="info-row"><strong id="lblInstitute">វិទ្យាស្ថាន:</strong> <span id="valInstitute">SETEC INSTITUTE</span></div>
+                  <div class="info-row"><strong id="lblAcademic">ឆ្នាំសិក្សា:</strong> <span id="valAcademic">2025 - 2026</span></div>
                 </div>
               </div>
             </div>
-
-            <!-- Profile និស្សិត (Student) -->
             <div class="col-md-6">
-              <div
-                class="footer-profile-box d-flex align-items-center gap-3 p-3"
-              >
+              <div class="footer-profile-box d-flex align-items-center gap-3 p-3">
                 <div class="footer-avatar-wrap">
-                  <img
-                    src="Contact/4x6.png"
-                    alt="Student"
-                    onerror="this.src = 'Contact/photo_2026-08-16_17-18-19.jpg'"
-                  />
-                  <span class="role-tag bg-danger" id="tagStudent"
-                    >និស្សិត</span
-                  >
+                  <img src="Contact/4x6.png" alt="Student" onerror="this.src='Contact/photo_2026-08-16_17-18-19.jpg'" />
+                  <span class="role-tag bg-danger" id="tagStudent">និស្សិត</span>
                 </div>
                 <div class="footer-profile-details text-white">
-                  <h5 class="fw-bold mb-1 text-info" id="stuName">
-                    និស្សិត: ជា សម្បត្តិ
-                  </h5>
-                  <div class="info-row">
-                    <strong id="lblClass">ថ្នាក់ / បន្ទប់:</strong>
-                    <span id="valClass">SX4</span>
-                  </div>
-                  <div class="info-row">
-                    <strong id="lblYear">កម្រិតសិក្សា:</strong>
-                    <span id="valYear">ឆ្នាំទី 1 (ឆមាសទី 2)</span>
-                  </div>
-                  <div class="info-row">
-                    <strong id="lblMajor">ជំនាញ:</strong>
-                    <span id="valMajor">Web Development</span>
-                  </div>
+                  <h5 class="fw-bold mb-1 text-info" id="stuName">និស្សិត: ជា សម្បត្តិ</h5>
+                  <div class="info-row"><strong id="lblClass">ថ្នាក់ / បន្ទប់:</strong> <span id="valClass">SX4</span></div>
+                  <div class="info-row"><strong id="lblYear">កម្រិតសិក្សា:</strong> <span id="valYear">ឆ្នាំទី 1 (ឆមាសទី 2)</span></div>
+                  <div class="info-row"><strong id="lblMajor">ជំនាញ:</strong> <span id="valMajor">Web Development</span></div>
                 </div>
               </div>
             </div>
           </div>
-
-          <!-- Quick Store Contacts Bar -->
-          <div
-            class="row g-2 text-white small border-top border-secondary pt-3 mt-4"
-          >
-            <div class="col-md-3 col-6" id="storeAddress">
-              <strong
-                ><i class="bi bi-geo-alt-fill text-danger"></i>
-                អាសយដ្ឋាន:</strong
-              >
-              ភ្នំពេញ, កម្ពុជា
-            </div>
-            <div class="col-md-3 col-6" id="storePhone">
-              <strong
-                ><i class="bi bi-telephone-fill text-success"></i>
-                ទូរស័ព្ទ:</strong
-              >
-              096 983 1891
-            </div>
-            <div class="col-md-3 col-6" id="storeEmail">
-              <strong
-                ><i class="bi bi-envelope-fill text-warning"></i>
-                អ៊ីមែល:</strong
-              >
-              sambathjackyy@gmail.com
-            </div>
-            <div class="col-md-3 col-6" id="storeHours">
-              <strong
-                ><i class="bi bi-clock-fill text-info"></i> ម៉ោងធ្វើការ:</strong
-              >
-              7:30 AM - 9:00 PM
-            </div>
+          <div class="row g-2 text-white small border-top border-secondary pt-3 mt-4">
+            <div class="col-md-3 col-6" id="storeAddress"><strong><i class="bi bi-geo-alt-fill text-danger"></i> អាសយដ្ឋាន:</strong> ភ្នំពេញ, កម្ពុជា</div>
+            <div class="col-md-3 col-6" id="storePhone"><strong><i class="bi bi-telephone-fill text-success"></i> ទូរស័ព្ទ:</strong> 096 983 1891</div>
+            <div class="col-md-3 col-6" id="storeEmail"><strong><i class="bi bi-envelope-fill text-warning"></i> អ៊ីមែល:</strong> sambathjackyy@gmail.com</div>
+            <div class="col-md-3 col-6" id="storeHours"><strong><i class="bi bi-clock-fill text-info"></i> ម៉ោងធ្វើការ:</strong> 7:30 AM - 9:00 PM</div>
           </div>
         </div>
-
-        <!-- Copyright -->
-        <div
-          class="text-center py-2 text-secondary small"
-          style="font-size: 11px"
-        >
+        <div class="text-center py-2 text-secondary small" style="font-size: 11px">
           © 2026 RUN & STYLE. All Rights Reserved. Powered by Sambath.
         </div>
       </div>
     </footer>
 
-    <!-- ========================================== -->
-    <!-- 🚀 JAVASCRIPT: បកប្រែ ៣ ភាសា & MODAL CONTROLS -->
-    <!-- ========================================== -->
+    <!-- JavaScript សម្រាប់បកប្រែ ៣ ភាសា -->
     <script>
       let currentLang = "km";
 
       const translations = {
         km: {
           storeTitle: "ហាងលក់ស្បែកជើងរត់ និងសម្លៀកបំពាក់កីឡា",
-          announcement:
-            "☀️ ហាងយើងខ្ញុំធានាផ្តល់ជូនស្បែកជើងរត់ និងសម្លៀកបំពាក់កីឡាដែលមានគុណភាពខ្ពស់ នាំចូលផ្ទាល់ 100%! &nbsp;&nbsp;&nbsp;&nbsp; 🔥 ចុះតម្លៃពិសេស 20% សម្រាប់ការបញ្ជាទិញថ្ងៃនេះ!",
+          announcement: "☀️ ហាងយើងខ្ញុំធានាផ្តល់ជូនស្បែកជើងរត់ និងសម្លៀកបំពាក់កីឡាដែលមានគុណភាពខ្ពស់ នាំចូលផ្ទាល់ 100%! &nbsp;&nbsp;&nbsp;&nbsp; 🔥 ចុះតម្លៃពិសេស 20% សម្រាប់ការបញ្ជាទិញថ្ងៃនេះ!",
           contactNav: '<i class="bi bi-person-lines-fill"></i> ទំនាក់ទំនង',
           sidebarHeading: "ផលិតផល",
           bestsellerHeading: "ផលិតផលលក់ដាច់ប្រចាំហាង",
@@ -2282,33 +1084,29 @@
             lblMajor: "ជំនាញ:",
             valMajor: "Web Development",
             storeTitle: '<i class="bi bi-shop"></i> ព័ត៌មានទំនាក់ទំនងហាង',
-            storeAddress:
-              '<strong><i class="bi bi-geo-alt-fill text-danger"></i> អាសយដ្ឋាន:</strong> ភ្នំពេញ, កម្ពុជា',
-            storePhone:
-              '<strong><i class="bi bi-telephone-fill text-success"></i> ទូរស័ព្ទ:</strong> 096 983 1891 / 098 765 432',
-            storeEmail:
-              '<strong><i class="bi bi-envelope-fill text-warning"></i> អ៊ីមែល:</strong> sambathjackyy@gmail.com',
-            storeHours:
-              '<strong><i class="bi bi-clock-fill text-primary"></i> ម៉ោងធ្វើការ:</strong> 7:30 AM - 9:00 PM',
+            storeAddress: '<strong><i class="bi bi-geo-alt-fill text-danger"></i> អាសយដ្ឋាន:</strong> ភ្នំពេញ, កម្ពុជា',
+            storePhone: '<strong><i class="bi bi-telephone-fill text-success"></i> ទូរស័ព្ទ:</strong> 096 983 1891 / 098 765 432',
+            storeEmail: '<strong><i class="bi bi-envelope-fill text-warning"></i> អ៊ីមែល:</strong> sambathjackyy@gmail.com',
+            storeHours: '<strong><i class="bi bi-clock-fill text-primary"></i> ម៉ោងធ្វើការ:</strong> 7:30 AM - 9:00 PM',
           },
         },
 
         en: {
           storeTitle: "Running Shoes & Sportswear Store",
-          announcement:
-            "☀️ We guarantee 100% authentic high-quality running shoes and sportswear! &nbsp;&nbsp;&nbsp;&nbsp; 🔥 Special 20% OFF today!",
-          contactNav: '<i class="bi bi-person-lines-fill"></i> Contact Us',
+          announcement: "☀️ We guarantee 100% authentic high-quality sports gear! &nbsp;&nbsp;&nbsp;&nbsp; 🔥 Special 20% OFF today!",
+          contactNav: '<i class="bi bi-person-lines-fill"></i> Contact',
           sidebarHeading: "Categories",
           bestsellerHeading: "Best Sellers",
           buyText: "Buy",
 
-          shoes: "Running Shoes",
-          tees: "Sport T-Shirts",
-          caps: "Sport Caps",
-          pants: "Sport Pants",
-          womenPants: "Women's Pants",
-          womenCaps: "Women's Caps",
-          socks: "Running Socks",
+          // កាត់ពាក្យ Navbar ឱ្យខ្លី សមាមាត្រស្អាត
+          shoes: "Shoes",
+          tees: "T-Shirts",
+          caps: "Caps",
+          pants: "Pants",
+          womenPants: "Women",
+          womenCaps: "W-Caps",
+          socks: "Socks",
 
           titleShoes: "👟 Running Shoes Collection",
           titleTees: "👕 Sport T-Shirts Collection",
@@ -2410,21 +1208,16 @@
             lblMajor: "Major:",
             valMajor: "Web Development",
             storeTitle: '<i class="bi bi-shop"></i> Store Contact Info',
-            storeAddress:
-              '<strong><i class="bi bi-geo-alt-fill text-danger"></i> Address:</strong> Phnom Penh, Cambodia',
-            storePhone:
-              '<strong><i class="bi bi-telephone-fill text-success"></i> Phone:</strong> 096 983 1891 / 098 765 432',
-            storeEmail:
-              '<strong><i class="bi bi-envelope-fill text-warning"></i> Email:</strong> sambathjackyy@gmail.com',
-            storeHours:
-              '<strong><i class="bi bi-clock-fill text-primary"></i> Hours:</strong> 7:30 AM - 9:00 PM',
+            storeAddress: '<strong><i class="bi bi-geo-alt-fill text-danger"></i> Address:</strong> Phnom Penh, Cambodia',
+            storePhone: '<strong><i class="bi bi-telephone-fill text-success"></i> Phone:</strong> 096 983 1891 / 098 765 432',
+            storeEmail: '<strong><i class="bi bi-envelope-fill text-warning"></i> Email:</strong> sambathjackyy@gmail.com',
+            storeHours: '<strong><i class="bi bi-clock-fill text-primary"></i> Hours:</strong> 7:30 AM - 9:00 PM',
           },
         },
 
         zh: {
           storeTitle: "专业跑鞋与运动服饰专卖店",
-          announcement:
-            "☀️ 本店保证提供100%正品高品质跑鞋及运动服饰！&nbsp;&nbsp;&nbsp;&nbsp; 🔥 今日下单立享8折优惠！",
+          announcement: "☀️ 本店保证提供100%正品高品质跑鞋及运动服饰！&nbsp;&nbsp;&nbsp;&nbsp; 🔥 今日下单立享8折优惠！",
           contactNav: '<i class="bi bi-person-lines-fill"></i> 联系我们',
           sidebarHeading: "产品分类",
           bestsellerHeading: "热销商品",
@@ -2538,14 +1331,10 @@
             lblMajor: "专业方向:",
             valMajor: "Web Development",
             storeTitle: '<i class="bi bi-shop"></i> 专卖店联系方式',
-            storeAddress:
-              '<strong><i class="bi bi-geo-alt-fill text-danger"></i> 门店地址:</strong> 柬埔寨 金边市',
-            storePhone:
-              '<strong><i class="bi bi-telephone-fill text-success"></i> 咨询电话:</strong> 096 983 1891 / 098 765 432',
-            storeEmail:
-              '<strong><i class="bi bi-envelope-fill text-warning"></i> 电子邮箱:</strong> sambathjackyy@gmail.com',
-            storeHours:
-              '<strong><i class="bi bi-clock-fill text-primary"></i> 营业时间:</strong> 早上 7:30 - 晚上 9:00',
+            storeAddress: '<strong><i class="bi bi-geo-alt-fill text-danger"></i> 门店地址:</strong> 柬埔寨 金边市',
+            storePhone: '<strong><i class="bi bi-telephone-fill text-success"></i> 咨询电话:</strong> 096 983 1891',
+            storeEmail: '<strong><i class="bi bi-envelope-fill text-warning"></i> 电子邮箱:</strong> sambathjackyy@gmail.com',
+            storeHours: '<strong><i class="bi bi-clock-fill text-primary"></i> 营业时间:</strong> 早上 7:30 - 晚上 9:00',
           },
         },
       };
@@ -2560,81 +1349,42 @@
           if (key && t[key]) item.innerText = t[key];
         });
 
-        if (document.getElementById("storeTitle"))
-          document.getElementById("storeTitle").innerText = t.storeTitle;
-        if (document.getElementById("announcementText"))
-          document.getElementById("announcementText").innerHTML =
-            t.announcement;
-        if (document.getElementById("navContact"))
-          document.getElementById("navContact").innerHTML = t.contactNav;
-        if (document.getElementById("navShoes"))
-          document.getElementById("navShoes").innerText = t.shoes;
-        if (document.getElementById("navTees"))
-          document.getElementById("navTees").innerText = t.tees;
-        if (document.getElementById("navCaps"))
-          document.getElementById("navCaps").innerText = t.caps;
-        if (document.getElementById("navPants"))
-          document.getElementById("navPants").innerText = t.pants;
-        if (document.getElementById("navWomenPants"))
-          document.getElementById("navWomenPants").innerText = t.womenPants;
-        if (document.getElementById("navWomenCaps"))
-          document.getElementById("navWomenCaps").innerText = t.womenCaps;
-        if (document.getElementById("navSocks"))
-          document.getElementById("navSocks").innerText = t.socks;
+        if (document.getElementById("storeTitle")) document.getElementById("storeTitle").innerText = t.storeTitle;
+        if (document.getElementById("announcementText")) document.getElementById("announcementText").innerHTML = t.announcement;
+        if (document.getElementById("navContact")) document.getElementById("navContact").innerHTML = t.contactNav;
+        if (document.getElementById("navShoes")) document.getElementById("navShoes").innerText = t.shoes;
+        if (document.getElementById("navTees")) document.getElementById("navTees").innerText = t.tees;
+        if (document.getElementById("navCaps")) document.getElementById("navCaps").innerText = t.caps;
+        if (document.getElementById("navPants")) document.getElementById("navPants").innerText = t.pants;
+        if (document.getElementById("navWomenPants")) document.getElementById("navWomenPants").innerText = t.womenPants;
+        if (document.getElementById("navWomenCaps")) document.getElementById("navWomenCaps").innerText = t.womenCaps;
+        if (document.getElementById("navSocks")) document.getElementById("navSocks").innerText = t.socks;
 
-        if (document.getElementById("sidebarHeading"))
-          document.getElementById("sidebarHeading").innerText =
-            t.sidebarHeading;
-        if (document.getElementById("bestsellerHeading"))
-          document.getElementById("bestsellerHeading").innerText =
-            t.bestsellerHeading;
-        if (document.getElementById("sideShoes"))
-          document.getElementById("sideShoes").innerText = t.shoes;
-        if (document.getElementById("sideTees"))
-          document.getElementById("sideTees").innerText = t.tees;
-        if (document.getElementById("sideCaps"))
-          document.getElementById("sideCaps").innerText = t.caps;
-        if (document.getElementById("sidePants"))
-          document.getElementById("sidePants").innerText = t.pants;
-        if (document.getElementById("sideWomenPants"))
-          document.getElementById("sideWomenPants").innerText = t.womenPants;
-        if (document.getElementById("sideWomenCaps"))
-          document.getElementById("sideWomenCaps").innerText = t.womenCaps;
-        if (document.getElementById("sideSocks"))
-          document.getElementById("sideSocks").innerText = t.socks;
+        if (document.getElementById("sidebarHeading")) document.getElementById("sidebarHeading").innerText = t.sidebarHeading;
+        if (document.getElementById("bestsellerHeading")) document.getElementById("bestsellerHeading").innerText = t.bestsellerHeading;
+        if (document.getElementById("sideShoes")) document.getElementById("sideShoes").innerText = t.shoes;
+        if (document.getElementById("sideTees")) document.getElementById("sideTees").innerText = t.tees;
+        if (document.getElementById("sideCaps")) document.getElementById("sideCaps").innerText = t.caps;
+        if (document.getElementById("sidePants")) document.getElementById("sidePants").innerText = t.pants;
+        if (document.getElementById("sideWomenPants")) document.getElementById("sideWomenPants").innerText = t.womenPants;
+        if (document.getElementById("sideWomenCaps")) document.getElementById("sideWomenCaps").innerText = t.womenCaps;
+        if (document.getElementById("sideSocks")) document.getElementById("sideSocks").innerText = t.socks;
 
-        if (document.getElementById("titleShoes"))
-          document.getElementById("titleShoes").innerText = t.titleShoes;
-        if (document.getElementById("titleTees"))
-          document.getElementById("titleTees").innerText = t.titleTees;
-        if (document.getElementById("titleCaps"))
-          document.getElementById("titleCaps").innerText = t.titleCaps;
-        if (document.getElementById("titlePants"))
-          document.getElementById("titlePants").innerText = t.titlePants;
-        if (document.getElementById("titleWomenPants"))
-          document.getElementById("titleWomenPants").innerText =
-            t.titleWomenPants;
-        if (document.getElementById("titleWomenCaps"))
-          document.getElementById("titleWomenCaps").innerText =
-            t.titleWomenCaps;
-        if (document.getElementById("titleSocks"))
-          document.getElementById("titleSocks").innerText = t.titleSocks;
+        if (document.getElementById("titleShoes")) document.getElementById("titleShoes").innerText = t.titleShoes;
+        if (document.getElementById("titleTees")) document.getElementById("titleTees").innerText = t.titleTees;
+        if (document.getElementById("titleCaps")) document.getElementById("titleCaps").innerText = t.titleCaps;
+        if (document.getElementById("titlePants")) document.getElementById("titlePants").innerText = t.titlePants;
+        if (document.getElementById("titleWomenPants")) document.getElementById("titleWomenPants").innerText = t.titleWomenPants;
+        if (document.getElementById("titleWomenCaps")) document.getElementById("titleWomenCaps").innerText = t.titleWomenCaps;
+        if (document.getElementById("titleSocks")) document.getElementById("titleSocks").innerText = t.titleSocks;
 
-        if (document.getElementById("bestShoe"))
-          document.getElementById("bestShoe").innerText = t.bestShoe;
-        if (document.getElementById("bestTee"))
-          document.getElementById("bestTee").innerText = t.bestTee;
-        if (document.getElementById("bestCap"))
-          document.getElementById("bestCap").innerText = t.bestCap;
-        if (document.getElementById("bestPants"))
-          document.getElementById("bestPants").innerText = t.bestPants;
-        if (document.getElementById("bestWomenPants"))
-          document.getElementById("bestWomenPants").innerText =
-            t.bestWomenPants;
-        if (document.getElementById("bestWomenCap"))
-          document.getElementById("bestWomenCap").innerText = t.bestWomenCap;
-        if (document.getElementById("bestSocks"))
-          document.getElementById("bestSocks").innerText = t.bestSocks;
+        if (document.getElementById("bestShoe")) document.getElementById("bestShoe").innerText = t.bestShoe;
+        if (document.getElementById("bestTee")) document.getElementById("bestTee").innerText = t.bestTee;
+        if (document.getElementById("bestCap")) document.getElementById("bestCap").innerText = t.bestCap;
+        if (document.getElementById("bestPants")) document.getElementById("bestPants").innerText = t.bestPants;
+        if (document.getElementById("bestWomenPants")) document.getElementById("bestWomenPants").innerText = t.bestWomenPants;
+        if (document.getElementById("bestWomenCap")) document.getElementById("bestWomenCap").innerText = t.bestWomenCap;
+        if (document.getElementById("bestSocks")) document.getElementById("bestSocks").innerText = t.bestSocks;
 
         document.querySelectorAll(".buy-btn-text").forEach((btn) => {
           btn.innerText = t.buyText;
@@ -2646,54 +1396,29 @@
       function updateTeamInfoLang() {
         const t = translations[currentLang]?.team;
         if (!t) return;
-        if (document.getElementById("mContactHeader"))
-          document.getElementById("mContactHeader").innerText = t.header;
-        if (document.getElementById("teamSecTitle"))
-          document.getElementById("teamSecTitle").innerText = t.secTitle;
-        if (document.getElementById("teamSecSub"))
-          document.getElementById("teamSecSub").innerText = t.secSub;
-        if (document.getElementById("tagLecturer"))
-          document.getElementById("tagLecturer").innerText = t.tagLec;
-        if (document.getElementById("tagStudent"))
-          document.getElementById("tagStudent").innerText = t.tagStu;
-        if (document.getElementById("lecName"))
-          document.getElementById("lecName").innerText = t.lecName;
-        if (document.getElementById("stuName"))
-          document.getElementById("stuName").innerText = t.stuName;
-        if (document.getElementById("lblSubject"))
-          document.getElementById("lblSubject").innerText = t.lblSubject;
-        if (document.getElementById("valSubject"))
-          document.getElementById("valSubject").innerText = t.valSubject;
-        if (document.getElementById("lblInstitute"))
-          document.getElementById("lblInstitute").innerText = t.lblInstitute;
-        if (document.getElementById("valInstitute"))
-          document.getElementById("valInstitute").innerText = t.valInstitute;
-        if (document.getElementById("lblAcademic"))
-          document.getElementById("lblAcademic").innerText = t.lblAcademic;
-        if (document.getElementById("valAcademic"))
-          document.getElementById("valAcademic").innerText = t.valAcademic;
-        if (document.getElementById("lblClass"))
-          document.getElementById("lblClass").innerText = t.lblClass;
-        if (document.getElementById("valClass"))
-          document.getElementById("valClass").innerText = t.valClass;
-        if (document.getElementById("lblYear"))
-          document.getElementById("lblYear").innerText = t.lblYear;
-        if (document.getElementById("valYear"))
-          document.getElementById("valYear").innerText = t.valYear;
-        if (document.getElementById("lblMajor"))
-          document.getElementById("lblMajor").innerText = t.lblMajor;
-        if (document.getElementById("valMajor"))
-          document.getElementById("valMajor").innerText = t.valMajor;
-        if (document.getElementById("storeContactTitle"))
-          document.getElementById("storeContactTitle").innerHTML = t.storeTitle;
-        if (document.getElementById("storeAddress"))
-          document.getElementById("storeAddress").innerHTML = t.storeAddress;
-        if (document.getElementById("storePhone"))
-          document.getElementById("storePhone").innerHTML = t.storePhone;
-        if (document.getElementById("storeEmail"))
-          document.getElementById("storeEmail").innerHTML = t.storeEmail;
-        if (document.getElementById("storeHours"))
-          document.getElementById("storeHours").innerHTML = t.storeHours;
+        if (document.getElementById("mContactHeader")) document.getElementById("mContactHeader").innerText = t.header;
+        if (document.getElementById("teamSecTitle")) document.getElementById("teamSecTitle").innerText = t.secTitle;
+        if (document.getElementById("teamSecSub")) document.getElementById("teamSecSub").innerText = t.secSub;
+        if (document.getElementById("tagLecturer")) document.getElementById("tagLecturer").innerText = t.tagLec;
+        if (document.getElementById("tagStudent")) document.getElementById("tagStudent").innerText = t.tagStu;
+        if (document.getElementById("lecName")) document.getElementById("lecName").innerText = t.lecName;
+        if (document.getElementById("stuName")) document.getElementById("stuName").innerText = t.stuName;
+        if (document.getElementById("lblSubject")) document.getElementById("lblSubject").innerText = t.lblSubject;
+        if (document.getElementById("valSubject")) document.getElementById("valSubject").innerText = t.valSubject;
+        if (document.getElementById("lblInstitute")) document.getElementById("lblInstitute").innerText = t.lblInstitute;
+        if (document.getElementById("valInstitute")) document.getElementById("valInstitute").innerText = t.valInstitute;
+        if (document.getElementById("lblAcademic")) document.getElementById("lblAcademic").innerText = t.lblAcademic;
+        if (document.getElementById("valAcademic")) document.getElementById("valAcademic").innerText = t.valAcademic;
+        if (document.getElementById("lblClass")) document.getElementById("lblClass").innerText = t.lblClass;
+        if (document.getElementById("valClass")) document.getElementById("valClass").innerText = t.valClass;
+        if (document.getElementById("lblYear")) document.getElementById("lblYear").innerText = t.lblYear;
+        if (document.getElementById("valYear")) document.getElementById("valYear").innerText = t.valYear;
+        if (document.getElementById("lblMajor")) document.getElementById("lblMajor").innerText = t.lblMajor;
+        if (document.getElementById("valMajor")) document.getElementById("valMajor").innerText = t.valMajor;
+        if (document.getElementById("storeAddress")) document.getElementById("storeAddress").innerHTML = t.storeAddress;
+        if (document.getElementById("storePhone")) document.getElementById("storePhone").innerHTML = t.storePhone;
+        if (document.getElementById("storeEmail")) document.getElementById("storeEmail").innerHTML = t.storeEmail;
+        if (document.getElementById("storeHours")) document.getElementById("storeHours").innerHTML = t.storeHours;
       }
 
       function openContactModal() {

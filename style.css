@@ -7,6 +7,10 @@ body {
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .main-container {
   width: 95%;
   max-width: 1300px;
@@ -14,13 +18,11 @@ body {
 }
 
 /* ========================================================= */
-/* 1. TOP HEADER & ANNOUNCEMENT BAR (STICKY TOP)             */
+/* 1. TOP HEADER & ANNOUNCEMENT BAR (ធម្មតា មិន LOCK ទេ)       */
 /* ========================================================= */
 
 .top-header {
-  position: sticky;
-  top: 0;
-  z-index: 1002;
+  position: static !important;
   background: linear-gradient(135deg, #1e293b, #0f172a);
   color: white;
   padding: 12px 18px;
@@ -37,18 +39,20 @@ body {
   gap: 12px;
 }
 
-.brand-logo {
-  background: #e11d48;
-  color: white;
-  font-weight: 800;
-  font-size: 18px;
-  padding: 6px 12px;
-  border-radius: 6px;
-  white-space: nowrap;
+.brand-logo-img {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(225, 29, 72, 0.4);
+  transition: transform 0.2s ease;
+}
+
+.brand-logo-img:hover {
+  transform: scale(1.05);
 }
 
 .store-title {
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 700;
   color: #f8fafc;
 }
@@ -73,11 +77,8 @@ body {
   transform: translateY(-2px);
 }
 
-/* Announcement Bar */
 .announcement-bar {
-  position: sticky;
-  top: 60px;
-  z-index: 1001;
+  position: static !important;
   background: #ffffff;
   padding: 8px 0;
   color: #1e293b;
@@ -99,61 +100,77 @@ body {
   100% { transform: translateX(-100%); }
 }
 
-.announcement-bar:hover .marquee-content {
-  animation-play-state: paused;
-}
-
 /* ========================================================= */
-/* 2. MAIN NAVBAR ZONE                                       */
+/* 2. MAIN NAVBAR ZONE (🔒 LOCK ជាប់ TOP 0 មិនឱ្យធ្លាក់ជួរ)   */
 /* ========================================================= */
 
 .main-navbar {
-  position: static !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1000 !important;
   background-color: #0d6efd;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 15px;
+  padding: 0 10px;
   margin-bottom: 15px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap !important;
+  gap: 4px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.main-navbar::-webkit-scrollbar {
+  display: none;
+}
+.main-navbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .nav-links {
-  display: flex;
+  display: flex !important;
   list-style: none;
   margin: 0;
   padding: 0;
-  flex-wrap: wrap;
+  flex-wrap: nowrap !important;
+  align-items: center;
+  gap: 1px;
 }
 
 .nav-links li a {
   display: block;
-  padding: 10px 14px;
+  padding: 10px 7px;
   color: white;
   text-decoration: none;
   font-weight: 600;
-  font-size: 13px;
+  font-size: 12px;
+  white-space: nowrap !important;
   transition: 0.2s;
 }
 
 .nav-links li a:hover,
 .nav-links li a.active {
   background: #0284c7;
+  border-radius: 4px;
 }
 
 .nav-right-tools {
-  display: flex;
+  display: flex !important;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
   color: white;
-  padding: 8px 0;
+  padding: 6px 0;
+  flex-shrink: 0 !important;
 }
 
 .nav-icon-badge {
-  font-size: 18px;
+  font-size: 15px;
   cursor: pointer;
   transition: transform 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 
 .nav-icon-badge:hover {
@@ -164,15 +181,15 @@ body {
 .lang-dropdown {
   background: #1e293b;
   color: white;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 4px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 3px 6px;
   border-radius: 4px;
-  font-size: 12px;
+  font-size: 11px;
   cursor: pointer;
 }
 
 /* ========================================================= */
-/* 3. MAIN GRID LAYOUT & SIDEBARS                            */
+/* 3. MAIN GRID & SIDEBARS                                   */
 /* ========================================================= */
 
 .content-grid {
@@ -183,10 +200,10 @@ body {
 
 .left-sidebar,
 .right-sidebar {
-  position: sticky;
-  top: 105px;
+  position: sticky !important;
+  top: 55px !important;
   height: fit-content;
-  max-height: calc(100vh - 115px);
+  max-height: calc(100vh - 65px);
   overflow-y: auto;
 }
 
@@ -216,18 +233,23 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 0;
+  padding: 8px 6px;
   color: #0284c7;
   text-decoration: none;
   border-bottom: 1px dashed #e2e8f0;
   font-weight: 600;
   font-size: 13px;
-  transition: 0.2s;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  outline: none;
 }
 
 .sidebar-menu li a:hover,
-.sidebar-menu li a.active {
-  color: #e11d48;
+.sidebar-menu li a:focus,
+.sidebar-menu li a:active {
+  background-color: #0284c7 !important;
+  color: #ffffff !important;
+  border-bottom-color: transparent !important;
 }
 
 .middle-content {
@@ -239,7 +261,7 @@ body {
 }
 
 .category-block {
-  scroll-margin-top: 120px;
+  scroll-margin-top: 60px !important;
 }
 
 .middle-content h5 {
@@ -294,7 +316,6 @@ body {
   font-size: 14px;
 }
 
-/* Action Icons ក្រោម Card (បេះដូង ភ្នែក កន្ត្រក) */
 .card-actions {
   display: flex;
   gap: 5px;
@@ -419,10 +440,7 @@ body {
   position: relative;
 }
 
-.modal-contact-custom {
-  max-width: 680px !important;
-  width: 95% !important;
-}
+.modal-contact-custom { max-width: 680px !important; width: 95% !important; }
 
 .modal-header-sport {
   background: linear-gradient(135deg, #1e293b, #0f172a);
@@ -456,7 +474,6 @@ body {
   justify-content: center;
 }
 
-/* Profile Card ក្នុង Contact Modal */
 .modal-contact-custom .profile-card {
   display: flex !important;
   flex-direction: row !important;
@@ -485,7 +502,7 @@ body {
   display: block;
 }
 
-.modal-contact-custom .role-tag {
+.role-tag {
   position: absolute;
   bottom: -6px;
   left: 50%;
@@ -499,44 +516,9 @@ body {
 }
 
 /* ========================================================= */
-/* 📱 5. RESPONSIVE FOR MOBILE & TABLET                      */
+/* 5. FOOTER & ABOUT PROJECT SECTION                         */
 /* ========================================================= */
 
-@media (max-width: 992px) {
-  .category-block {
-    scroll-margin-top: 155px !important;
-  }
-  .left-sidebar {
-    width: 50px !important;
-    min-width: 50px !important;
-    padding: 10px 4px !important;
-    top: 145px !important;
-  }
-  .left-sidebar h5,
-  .left-sidebar .sidebar-menu li a span {
-    display: none !important;
-  }
-  .middle-content {
-    width: calc(100% - 58px) !important;
-  }
-  .right-sidebar {
-    display: none !important;
-  }
-}
-
-@media (max-width: 576px) {
-  .top-header {
-    flex-direction: column;
-    text-align: center;
-  }
-  .main-navbar {
-    justify-content: center;
-  }
-  .nav-links {
-    justify-content: center;
-  }
-}
-/* Footer Project & Team Styling */
 .footer-project-section {
   background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
   border-radius: 12px 12px 0 0;
@@ -588,9 +570,59 @@ body {
   color: #ffffff;
 }
 
+/* ========================================================= */
+/* 📱 6. RESPONSIVE FOR MOBILE & TABLET                      */
+/* ========================================================= */
+
+@media (max-width: 992px) {
+  .category-block {
+    scroll-margin-top: 65px !important;
+  }
+  .left-sidebar {
+    width: 50px !important;
+    min-width: 50px !important;
+    padding: 10px 4px !important;
+    top: 55px !important;
+  }
+  .left-sidebar h5,
+  .left-sidebar .sidebar-menu li a span {
+    display: none !important;
+  }
+  .left-sidebar .sidebar-menu li a:hover,
+  .left-sidebar .sidebar-menu li a:focus,
+  .left-sidebar .sidebar-menu li a:active {
+    background-color: #0284c7 !important;
+    color: #ffffff !important;
+  }
+  .middle-content {
+    width: calc(100% - 58px) !important;
+  }
+  .right-sidebar {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-navbar {
+    padding: 4px 6px !important;
+    gap: 4px !important;
+  }
+  .nav-links li a {
+    padding: 6px 6px !important;
+    font-size: 11px !important;
+  }
+}
+
 @media (max-width: 576px) {
+  .top-header {
+    flex-direction: column;
+    text-align: center;
+  }
   .footer-profile-box {
     flex-direction: column;
     text-align: center;
+  }
+  .product-card img {
+    height: 110px;
   }
 }
