@@ -17,15 +17,29 @@ html {
   margin: 10px auto;
 }
 
-/* ========================================================= */
-/* 1. TOP HEADER & ANNOUNCEMENT BAR (ធម្មតា មិន LOCK ទេ)       */
-/* ========================================================= */
 
 .announcement-bar {
-  display: none !important; /* បន្ថែមបន្ទាត់នេះដើម្បីបិទមិនឱ្យបង្ហាញ */
+  display: none !important;
   position: static !important;
   background: #ffffff;
   padding: 8px 0;
+  color: #1e293b;
+  font-size: 13px;
+  font-weight: 600;
+  border-bottom: 2px solid #e2e8f0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-content {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 16s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
 }
 
 .top-header {
@@ -84,33 +98,7 @@ html {
   transform: translateY(-2px);
 }
 
-.announcement-bar {
-  position: static !important;
-  background: #ffffff;
-  padding: 8px 0;
-  color: #1e293b;
-  font-size: 13px;
-  font-weight: 600;
-  border-bottom: 2px solid #e2e8f0;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.marquee-content {
-  display: inline-block;
-  padding-left: 100%;
-  animation: marquee 16s linear infinite;
-}
-
-@keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
-}
-
-/* ========================================================= */
-/* 2. MAIN NAVBAR ZONE (🔒 LOCK ជាប់ TOP 0 មិនឱ្យធ្លាក់ជួរ)   */
-/* ========================================================= */
-
+/* 2. MAIN NAVBAR ZONE */
 .main-navbar {
   position: sticky !important;
   top: 0 !important;
@@ -143,24 +131,47 @@ html {
   padding: 0;
   flex-wrap: nowrap !important;
   align-items: center;
-  gap: 1px;
+  gap: 4px;
 }
 
+
 .nav-links li a {
+  position: relative;
   display: block;
-  padding: 10px 7px;
-  color: white;
+  padding: 10px 10px;
+  color: #ffffff;
   text-decoration: none;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 12.5px;
   white-space: nowrap !important;
-  transition: 0.2s;
+  transition: all 0.25s ease;
+  border-radius: 4px;
 }
+
 
 .nav-links li a:hover,
 .nav-links li a.active {
-  background: #0284c7;
-  border-radius: 4px;
+  background-color: #0284c7 !important;
+  color: #ffffff !important;
+}
+
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after,
+.nav-links li a.active::after {
+  width: 75%;
 }
 
 .nav-right-tools {
@@ -195,9 +206,6 @@ html {
   cursor: pointer;
 }
 
-/* ========================================================= */
-/* 3. MAIN GRID & SIDEBARS                                   */
-/* ========================================================= */
 
 .content-grid {
   display: flex;
@@ -253,7 +261,7 @@ html {
 
 .sidebar-menu li a:hover,
 .sidebar-menu li a:focus,
-.sidebar-menu li a:active {
+.sidebar-menu li a.active {
   background-color: #0284c7 !important;
   color: #ffffff !important;
   border-bottom-color: transparent !important;
@@ -279,7 +287,7 @@ html {
   font-size: 16px;
 }
 
-/* Product Card */
+
 .product-card {
   border: 1px solid #f1f5f9;
   background: #f8fafc;
@@ -365,7 +373,7 @@ html {
   color: white;
 }
 
-/* Right Sidebar */
+
 .right-sidebar {
   width: 20%;
   background: white;
@@ -420,111 +428,6 @@ html {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* ========================================================= */
-/* 4. MODALS & POPUPS                                        */
-/* ========================================================= */
-
-.sport-modal-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(15, 23, 42, 0.75);
-  backdrop-filter: blur(8px);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  padding: 15px;
-}
-
-.sport-modal {
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
-  overflow: hidden;
-  position: relative;
-}
-
-.modal-contact-custom { max-width: 680px !important; width: 95% !important; }
-
-.modal-header-sport {
-  background: linear-gradient(135deg, #1e293b, #0f172a);
-  color: white;
-  padding: 14px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.modal-header-sport h5 {
-  margin: 0;
-  font-size: 16px;
-  font-weight: 700;
-}
-
-.btn-close-modal {
-  position: absolute;
-  top: 12px;
-  right: 15px;
-  background: rgba(255, 255, 255, 0.1);
-  border: none;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  font-size: 20px;
-  cursor: pointer;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.modal-contact-custom .profile-card {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  gap: 12px !important;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 10px;
-  padding: 12px !important;
-}
-
-.modal-contact-custom .profile-avatar-wrap {
-  position: relative;
-  width: 85px !important;
-  height: 85px !important;
-  min-width: 85px !important;
-  flex-shrink: 0;
-}
-
-.modal-contact-custom .profile-avatar-wrap img {
-  width: 85px !important;
-  height: 85px !important;
-  object-fit: cover !important;
-  border-radius: 50% !important;
-  border: 3px solid #0284c7;
-  display: block;
-}
-
-.role-tag {
-  position: absolute;
-  bottom: -6px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: white;
-  font-size: 10px;
-  font-weight: 700;
-  padding: 2px 8px;
-  border-radius: 10px;
-  white-space: nowrap;
-}
-
-/* ========================================================= */
-/* 5. FOOTER & ABOUT PROJECT SECTION                         */
-/* ========================================================= */
 
 .footer-project-section {
   background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
@@ -560,6 +463,19 @@ html {
   border: 3px solid #38bdf8;
 }
 
+.role-tag {
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+
 .footer-profile-details {
   font-size: 13px;
   line-height: 1.6;
@@ -577,9 +493,6 @@ html {
   color: #ffffff;
 }
 
-/* ========================================================= */
-/* 📱 6. RESPONSIVE FOR MOBILE & TABLET                      */
-/* ========================================================= */
 
 @media (max-width: 992px) {
   .category-block {
@@ -595,12 +508,6 @@ html {
   .left-sidebar .sidebar-menu li a span {
     display: none !important;
   }
-  .left-sidebar .sidebar-menu li a:hover,
-  .left-sidebar .sidebar-menu li a:focus,
-  .left-sidebar .sidebar-menu li a:active {
-    background-color: #0284c7 !important;
-    color: #ffffff !important;
-  }
   .middle-content {
     width: calc(100% - 58px) !important;
   }
@@ -609,9 +516,6 @@ html {
   }
 }
 
-/* ========================================================= */
-/*  NAVBAR 
-/* ========================================================= */
 @media screen and (max-width: 768px) {
   .main-navbar {
     display: flex !important;
