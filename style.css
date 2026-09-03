@@ -21,6 +21,13 @@ html {
 /* 1. TOP HEADER & ANNOUNCEMENT BAR (ធម្មតា មិន LOCK ទេ)       */
 /* ========================================================= */
 
+.announcement-bar {
+  display: none !important; /* បន្ថែមបន្ទាត់នេះដើម្បីបិទមិនឱ្យបង្ហាញ */
+  position: static !important;
+  background: #ffffff;
+  padding: 8px 0;
+}
+
 .top-header {
   position: static !important;
   background: linear-gradient(135deg, #1e293b, #0f172a);
@@ -603,7 +610,7 @@ html {
 }
 
 /* ========================================================= */
-/* 📱 បង្ខំ NAVBAR ឱ្យធ្លាក់ជួរចំកណ្តាលលើ MOBILE (FORCE WRAP)  */
+/*  NAVBAR 
 /* ========================================================= */
 @media screen and (max-width: 768px) {
   .main-navbar {
